@@ -4,7 +4,7 @@ import json
 import re
 import PyPDF2
 
-pdf_file_path = "cc_bank_pdfs/center_ru.pdf"
+pdf_file_path = "cc_bank_pdfs/aawd.pdf"
 def extract_text_from_pdf(pdf_file_path):
     text = ""
     with open(pdf_file_path, 'rb') as pdf_file:
@@ -91,5 +91,5 @@ centercredit_data = {
     "header_data": header_data,
     "transactions": data
 }
-with open('cc_bank_jsons/ru.json', 'w', encoding='utf-8') as json_file:
+with open('cc_bank_jsons/la.json', 'w', encoding='utf-8') as json_file:
     json.dump(centercredit_data, json_file, ensure_ascii=False, indent=4)
